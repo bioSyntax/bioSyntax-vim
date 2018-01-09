@@ -1,29 +1,30 @@
 if exists("syntax_on")
-    syntax reset
+	syntax reset
 	colorscheme bioSyntax
-	set nowrap	
+	set nowrap
 endif
 
-syntax match gradbw1 "[/\!-/\$]" contained
-syntax match gradbw2 "[/\%-/\(]" contained
-syntax match gradbw3 "[/\)-/\,]" contained
-syntax match gradbw4 "[/\--/\/]" contained
-syntax match gradbw5 "[0-4]" contained
-syntax match gradbw6 "[5-9]" contained
-syntax match gradbw7 "[/\:/\;/\<]" contained
-syntax match gradbw8 "[/\=/\>/\?/\@]" contained
-syntax match gradbw9 "[A-E]" contained
-syntax match gradbw10 "[F-J]" contained
+syntax match gradbw1  "[/\!-/\$]"      contained
+syntax match gradbw2  "[/\%-/\(]"      contained
+syntax match gradbw3  "[/\)-/\,]"      contained
+syntax match gradbw4  "[/\--/\/]"      contained
+syntax match gradbw5  "[0-4]"          contained
+syntax match gradbw6  "[5-9]"          contained
+syntax match gradbw7  "[/\:/\;/\<]"    contained
+syntax match gradbw8  "[/\=/\>/\?/\@]" contained
+syntax match gradbw9  "[A-E]"          contained
+syntax match gradbw10 "[F-J]"          contained
 
-syntax region headerbw start="^@\{1,2}.*$" end="\n\@="
-syntax region bases start="^[ACGT]\{10,}" end=".*$" contains=ntA,ntG,ntC,ntT
-syntax region comment2 start="\([ACGT]\{10,}\)\@<=" end="\n\@=" 
-syntax region quality start="\(+*$\n\@=\)\@<=.*" end="\n\@=" contains=gradbw1,gradbw2,gradbw3,gradbw4,gradbw5,gradbw6,gradbw7,gradbw8,gradbw9,gradbw10
+syntax region headerbw start="^@\{1,2}.*$"          end="\n\@="
+syntax region bases    start="^[ACGTN]\{10,}"       end=".*$"   contains=ntA,ntG,ntC,ntT,ntN
+syntax region comment2 start="\([ACGT]\{10,}\)\@<=" end="\n\@="
+syntax region quality  start="\(+*$\n\@=\)\@<=.*"   end="\n\@=" contains=gradbw1,gradbw2,gradbw3,gradbw4,gradbw5,gradbw6,gradbw7,gradbw8,gradbw9,gradbw10
 
 syntax match ntA "A" contained
 syntax match ntG "G" contained
 syntax match ntC "C" contained
 syntax match ntT "T" contained
+syntax match ntN "N" contained
 
 "highlight header ctermfg=100
 "highlight com ctermfg=20
