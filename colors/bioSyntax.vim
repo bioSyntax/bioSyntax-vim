@@ -32,6 +32,7 @@ highlight	keyword6	cterm=NONE	guibg=NONE	guifg=#E6DB74	ctermbg=NONE	ctermfg=178
 highlight	genome	cterm=bold	guibg=NONE	guifg=#1E8449	ctermbg=NONE	ctermfg=28
 highlight	chr	cterm=bold	guibg=NONE	guifg=#1E8449	ctermbg=NONE	ctermfg=28
 highlight	chrStart	cterm=NONE	guibg=NONE	guifg=#1E8449	ctermbg=NONE	ctermfg=28
+highlight	chrStart2	cterm=NONE	guibg=NONE	guifg=#00d75f	ctermbg=NONE	ctermfg=41
 highlight	chrEnd	cterm=NONE	guibg=NONE	guifg=#1E8449	ctermbg=NONE	ctermfg=28
 highlight	strandPlus	cterm=NONE	guibg=#4192FF	guifg=#000000	ctermbg=33	ctermfg=0
 highlight	strandMinus	cterm=NONE	guibg=#F09000	guifg=#000000	ctermbg=166	ctermfg=0
